@@ -669,9 +669,8 @@ main {
 	font-size: 14px;
     font-size: 1.4rem;
 }
-
-.post-meta time {
-    display: block;
+.post-meta-text{
+    text-align: center;
 }
 
 .site-footer {

@@ -3,19 +3,24 @@
     <article class="post-item">
         <div class="inner">
             <header class="post-item-header">
-                <aside class="col-aside">
+                <aside class="col-aside">                    
                 </aside>
                 <h2 class="post-item-title"><a href="{{url}}">{{{title}}}</a></h2>
             </header>
             <div class="post-preview">
                 <aside class="col-aside">
                     <span class="post-meta">
-                        <time class="post-item-time" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time> 
-                        <p class="post-item-tags"><i class="fa fa-tags"></i> {{tags separator=", "}}</p>
+                        {{#if image}}
+                            <img src="{{ image }}" alt="">
+                        {{/if}}
+                        <div class="post-meta-text">
+                            By {{author}}, in
+                            <time class="post-item-time" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM"}}</time>
+                        </div>
                     </span>            
                 </aside>
                 <section class="post-excerpt">
-                    <p>{{excerpt words="35"}}&hellip;</p>
+                    <p>{{excerpt words="100"}}&hellip;</p>
                     <a class="btn" href="{{url}}">Read More</a>
                 </section>
             </div>
